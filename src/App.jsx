@@ -1,19 +1,22 @@
-import { useState } from 'react'
-import './App.css'
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from 'react'
 import Header from './components/header.jsx'
-import Navigation from './components/navigation.jsx'
-// import Project from './components/project.jsx'
-import Footer from './components/footer.jsx'
-import 'bootstrap/dist/css/bootstrap.css';
+import Layout from "./pages/layout";
+import Home from "./pages/home";
+import AddNew from "./pages/addNew";
 import './App.css';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout/>}>
+          <Route index element={<Home/>}/>
+          <Route path='addNew' element={<AddNew/>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
