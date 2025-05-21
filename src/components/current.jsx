@@ -1,9 +1,18 @@
 const CurrentWeather = () => {
     return (
-        <div>
-            <h1>Current Weather</h1>
-            <p>Weather data will be displayed here.</p>
-        </div>
+        <>
+            <div className='headline'>
+                <h1 className='city'>Raleigh</h1>
+                <p className='temp'>72* F</p>
+                <p className= 'condition'>Cloudy</p>
+            </div>
+            <div className='current details'>
+                <div>
+                    <p>Humidity</p>
+                    <p>50%</p>
+                </div>
+            </div>
+        </>
     );
 }
 
