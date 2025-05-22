@@ -9,6 +9,8 @@ import ErrorPage from "./pages/errorPage";
 import './App.css';
 
 function App() {
+  const [weatherData, setWeatherData] = useState(null);
+  const [city, setCity] = useState("raleigh");
   return (
     <BrowserRouter>
       <Routes>
