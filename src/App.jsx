@@ -9,7 +9,8 @@ import ErrorPage from "./pages/errorPage";
 import './App.css';
 
 function App() {
-  const API_KEY = '1e46d68b29a9ca5b76f8878e136d310e';
+  const [weatherData, setWeatherData] = useState(null);
+  const [city, setCity] = useState("raleigh");
   return (
     <BrowserRouter>
       <Routes>
