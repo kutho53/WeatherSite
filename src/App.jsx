@@ -27,15 +27,17 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout/>}>
-          <Route index element={<Home/>}/>
-          <Route path='changeLoc' element={<ChangeLoc/>}/>
-          <Route path='*' element={<ErrorPage/>}/>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div className="wrapper">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout/>}>
+            <Route index element={<Home/>}/>
+            <Route path='changeLoc' element={<ChangeLoc/>}/>
+            <Route path='*' element={<ErrorPage/>}/>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
