@@ -6,11 +6,11 @@ import Forecast from '../components/forecast';
 
 const Home = () => {
     return (
-        <wrapper>
+        <div>
             <h1>Home</h1>
             <CurrentWeather />
             <Forecast />
-        </wrapper>
+        </div>
     );
 };
 
