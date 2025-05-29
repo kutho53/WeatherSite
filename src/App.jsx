@@ -8,9 +8,24 @@ import ChangeLoc from "./pages/changeLoc";
 import ErrorPage from "./pages/errorPage";
 import './App.css';
 
+const [weatherData, setWeatherData] = useState(null);
+const [city, setCity] = useState("raleigh");
+useEffect(() => {
+    const fetchWeatherData = async (cityName) => {
+      try {
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=imperial`;
+        const response = await fetch(url);
+        const data = await response.json();
+        setWeatherData(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchWeatherData(city)
+  });
+
 function App() {
-  const [weatherData, setWeatherData] = useState(null);
-  const [city, setCity] = useState("raleigh");
   return (
     <BrowserRouter>
       <Routes>
