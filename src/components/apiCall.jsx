@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-const useWeatherData = (initialCity = 'raleigh') => {
+const useWeatherData = (initialCity = 'chicago') => {
     const [weatherData, setWeatherData] = useState(null);
     const [city, setCity] = useState(initialCity);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const API_KEY = process.env.API_KEY;
+        const API_KEY = import.meta.env.VITE_API_KEY;
         const fetchWeatherData = async (cityName) => {
             try {
                 setLoading(true);
