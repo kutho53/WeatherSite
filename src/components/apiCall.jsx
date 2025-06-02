@@ -8,6 +8,7 @@ const useWeatherData = (initialCity = 'chicago') => {
 
     useEffect(() => {
         const API_KEY = import.meta.env.VITE_API_KEY;
+        console.log("API_KEY:", API_KEY);
         const fetchWeatherData = async (cityName) => {
             try {
                 setLoading(true);
