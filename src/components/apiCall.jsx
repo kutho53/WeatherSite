@@ -9,11 +9,12 @@ const useWeatherData = (initialCity = 'chicago') => {
     useEffect(() => {
         const API_KEY = import.meta.env.VITE_API_KEY;
         console.log("API_KEY:", API_KEY);
-        const fetchWeatherData = async (cityName) => {
+        console.log("City:", city);
+        const fetchWeatherData = async (city) => {
             try {
                 setLoading(true);
                 setError(null);
-                const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=imperial`;
+                const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=imperial`;
                 const response = await fetch(url);
                 if (!response.ok) throw new Error('Failed to fetch response');
                 const data = await response.json();
@@ -26,6 +27,7 @@ const useWeatherData = (initialCity = 'chicago') => {
         };
 
         fetchWeatherData(city);
+        //console.log(response)
     }, [city]);
 
     return { weatherData, city, setCity, loading, error };
