@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-const useWeatherData = (initialCity = 'chicago') => {
+const
+
+const useWeatherData = (initialCity = 'woodland') => {
     const [weatherData, setWeatherData] = useState(null);
     const [city, setCity] = useState(initialCity);
     const [loading, setLoading] = useState(true);
@@ -18,6 +20,7 @@ const useWeatherData = (initialCity = 'chicago') => {
                 const response = await fetch(url);
                 if (!response.ok) throw new Error('Failed to fetch response');
                 const data = await response.json();
+                console.log("Weather Data:", data);
                 setWeatherData(data);
             } catch (error) {
                 console.log(error);
