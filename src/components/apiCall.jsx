@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const fullWeatherData
+const fullWeatherData = 
 
 const useWeatherData = (initialCity = 'woodland') => {
     const [weatherData, setWeatherData] = useState(null);
