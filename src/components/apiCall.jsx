@@ -19,7 +19,7 @@ const useWeatherData = (initialCity = 'woodland') => {
                 if (data.results && data.results.length > 0) {
                     const { lat, lng } = data.results[0].geometry;
                     console.log("Coordinates:", lat, lng);
-                    // You can use lat and lng for further processing if needed
+                    // You can use lat and lng to fetch the full data
                 } else {
                     console.error("No results found for the given city.");
                 }
