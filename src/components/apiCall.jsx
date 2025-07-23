@@ -47,8 +47,7 @@ const useWeatherData = (initialCity = 'woodland') => {
             }
         };
 
-        // fetch(`https://api.opencagedata.com/geocode/v1/json?q=${city}&key=${GEOCODE_API_KEY}`)
-        fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${GEOCODE_API_KEY}`)
+        fetch(`https://api.opencagedata.com/geocode/v1/json?q=${city}&key=${GEOCODE_API_KEY}`)
             .then(response => response.json())
             .then(data => {
                 if (data.results && data.results.length > 0) {
