@@ -1,7 +1,7 @@
 # Weather App
 
   ## Description 
-  Weather forecast app built using react.
+  Interactive weather forecast app built using react.
 
   ## Table of Contents 
   * [License](#License)
