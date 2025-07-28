@@ -59,7 +59,7 @@ const useWeatherData = (initialCity = 'woodland') => {
                     // You can use lat and lng to fetch the full data
                 } else {
                     console.error("No results found for the given city.");
-                    setError("No results found for the given city.");
+                    setError("No results found for given city.");
                     setLoading(false);
                 }
             })
