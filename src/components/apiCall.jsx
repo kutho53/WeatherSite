@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const useWeatherData = (initialCity = 'raleigh') => {
+const useWeatherData = (initialCity = 'Raleigh') => {
     const [weatherData, setWeatherData] = useState(null);
     const [city, setCity] = useState(initialCity);
     const [loading, setLoading] = useState(true);
