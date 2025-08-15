@@ -1,7 +1,7 @@
 # Weather App
 
   ## Description 
-  Interactive weather forecast app built using react.
+  Interactive weather forecast app built using react. Default city of Raleigh, NC with integrated city search ability. 
 
   ## Table of Contents 
   * [License](#License)
