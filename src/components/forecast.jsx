@@ -2,6 +2,18 @@ import useWeatherData from "./apiCall";
 
 const Forecast = () => {
     const { weatherData, city, setCity, loading, error } = useWeatherData();
+    const iconMap = {
+        "clear-day": "☀️",
+        "clear-night": "🌙",
+        "partly-cloudy-day": "⛅",
+        "partly-cloudy-night": "🌤️",
+        "cloudy": "☁️",
+        "rain": "🌧️",
+        "snow": "❄️",
+        "sleet": "🌨️",
+        "wind": "💨",
+        "fog": "🌫️",
+    };
     
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error.message}</p>;
